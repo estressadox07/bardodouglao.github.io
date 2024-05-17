@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar do Douglao - Empresa</title>
+    <link rel="shortcut icon" href="assets/img/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- NavBar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/Logo.png" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="montagem.html">Montar Pedido</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="empresa.html">Fale Conosco</a></li>
+            </ul>
+            <div class="icons">
+                <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar Fim -->
+
+    <div class="paginapinto" container>
+        <!-- Sobre a Empresa -->
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="assets/img/fotodouglas.png" alt="Fundador da Empresa">
+                </div>
+                <div class="about-content">
+                    <h2>Sobre a Empresa</h2>
+                    <p>
+                    <h4>Aviso Importante</h4><br>
+                    Olá, pessoal!
+                    Gostaríamos de avisar que este site não está realmente em funcionamento. Ele é, na verdade, um
+                    projeto
+                    acadêmico realizado sob a orientação do professor Douglas Drosdoki. Este projeto foi desenvolvido
+                    por
+                    nós,
+                    Jdean Guilhermino Coelho e Angelo Orletti, como parte do trabalho final do curso de Desenvolvedor
+                    Web.
+                    <h4>Agradecimentos Especiais</h4><br>
+                    Aproveitamos para expressar nossa imensa gratidão ao professor Douglas Drosdoki. Suas aulas foram
+                    uma
+                    fonte
+                    incrível de conhecimento e inspiração. Ao longo do curso, tivemos a chance de aprender muito mais do
+                    que
+                    apenas desenvolvimento web. Aprendemos sobre dedicação, trabalho em equipe e a busca constante por
+                    fazer
+                    o
+                    melhor.
+                    <h4>Reconhecimento ao Professor</h4><br>
+                    Professor Douglas, seu compromisso com o ensino e sua paixão pela área nos motivaram a dar o nosso
+                    melhor em
+                    cada etapa do curso. Sua capacidade de explicar conceitos complexos de maneira clara e sua paciência
+                    ao
+                    tirar nossas dúvidas foram essenciais para o nosso aprendizado.
+                    <h4>Experiência e Aprendizado</h4><br>
+                    Trabalhar neste projeto final foi uma experiência desafiadora e gratificante. Pudemos colocar em
+                    prática
+                    tudo o que aprendemos, desde a criação de interfaces amigáveis até a implementação de
+                    funcionalidades
+                    complexas. Este projeto nos ajudou a consolidar nosso conhecimento e nos preparou melhor para os
+                    desafios
+                    futuros na área de desenvolvimento web.
+                    <h4>Gratidão</h4><br>
+                    Queremos também agradecer a todos os colegas de curso que colaboraram, compartilharam conhecimentos
+                    e
+                    experiências, tornando nossa jornada ainda mais rica e agradável. O apoio mútuo foi fundamental para
+                    o
+                    sucesso de todos nós.
+                    <h4>Conclusão</h4><br>
+                    Mais uma vez, agradecemos ao professor Douglas Drosdoki por sua dedicação e ensinamentos. Este
+                    projeto é
+                    um
+                    reflexo de tudo o que aprendemos e do progresso que alcançamos graças à sua orientação. Estamos
+                    confiantes
+                    de que as habilidades e conhecimentos adquiridos nos ajudarão a trilhar um caminho de sucesso na
+                    carreira de
+                    Desenvolvedor Web.
+
+                    Com carinho,
+
+                    Jdean Guilhermino Coelho e Angelo Orletti</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fim Sobre a Empresa -->
+
+
+
+        <!-- Fale conosco -->
+            <main>
+                <section class="contact-form">
+                    <h2>Fale Conosco</h2>
+                    <form id="contactForm">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="nome" name="name" placeholder="Nome">
+                        <label for="name">sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrename" placeholder="sobrenome">
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="e-mail">
+
+                        <label for="message">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Fale Conosco"></textarea>
+
+                        <button type="button" onclick="validar()">Enviar</button>
+                    </form> 
+            </main>
+        </div>
+        <!-- Fale Conosco -->
+    </div>
+
+    <!-- Inicio Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Bar do Douglão</h3>
+                <p>O melhor lugar para você relaxar e saborear comidas deliciosas.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <p>Telefone: (27) 77777-7777</p>
+                <p>Email: contato@bardodouglao.com.br</p>
+                <p>Endereço: Rua Douglas Drosdoki, 777 - Espírito Santo, ES</p>
+            </div>
+            <div class="footer-social">
+                <h3>Siga-nos</h3>
+                <a href="https://www.instagram.com/bardodouglao/" class="social-icon">Facebook</a>
+                <a href="https://www.instagram.com/bardodouglao/" class="social-icon">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bar do Douglão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- Fim Rodapé -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

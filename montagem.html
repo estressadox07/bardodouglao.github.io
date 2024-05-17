@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar do Douglão</title>
+    <link rel="shortcut icon" href="assets/img/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- NavBar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/Logo.png" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="montagem.html">Montar Pedido</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="empresa.html">Fale Conosco</a></li>
+            </ul>
+            <div class="icons">
+                <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar Fim -->
+
+    <!-- começo cardápio -->
+    <div class="pedidopinto">
+        <div class="pedido-container">
+            <h2 class="pedido-title">Montagem de Pedido</h2>
+            <label for="produto" class="pedido-label">Escolha o Produto:</label>
+            <select name="produto" id="produto" class="pedido-select" onchange="showOptions()">
+                <option value="">Alimentos</option>
+                <option value="hamburguer">Hamburguer</option>
+                <option value="sushi">Sushi</option>
+                <option value="churrasco">Churrasco</option>
+                <option value="pastel">Pastel</option>
+                <option value="hotdog">Cachorro-Quente</option>
+                <option value="porcao">Porções</option>
+                <option value="churros">Churros</option>
+            </select>
+
+            <div id="hamburguer-options" class="pedido-options" style="display: none;">
+                <label for="tipo-hamburguer" class="pedido-label">Escolha o Tipo de Hamburguer:</label>
+                <select name="tipo-hamburguer" id="tipo-hamburguer" class="pedido-select">
+                    <option value="">Hamburguers</option>
+                    <option value="xtotalduplo">X-Total Duplo - R$ 25.00</option>
+                    <option value="xtotal">X-Total - R$ 20.00</option>
+                    <option value="xbacon">X-Bacon - R$ 15.00</option>
+                    <option value="xeggs">X-Eggs - R$ 18.00</option>
+                    <option value="classic">Classic - R$ 12.00</option>
+                    <option value="ratao">X-Ratão - R$ 22.00</option>
+                    <option value="xburguer">X-Douglao - R$ 10.00</option>
+                </select>
+            </div>
+
+            <div id="sushi-options" class="pedido-options" style="display: none;">
+                <label for="tipo-sushi" class="pedido-label">Escolha o Tipo de Sushi:</label>
+                <select name="tipo-sushi" id="tipo-sushi" class="pedido-select">
+                    <option value="">Sushis</option>
+                    <option value="niguiri">Niguiri - R$ 10.00</option>
+                    <option value="temaki">Temaki - R$ 12.00</option>
+                    <option value="uramaki">Uramaki - R$ 15.00</option>
+                    <option value="hosomaki">Hosomaki - R$ 14.00</option>
+                    <option value="sashimi">Sashimi - R$ 18.00</option>
+                </select>
+            </div>
+
+            <div id="churrasco-options" class="pedido-options" style="display: none;">
+                <label for="tipo-churrasco" class="pedido-label">Escolha o Tipo de Churrasco:</label>
+                <select name="tipo-churrasco" id="tipo-churrasco" class="pedido-select">
+                    <option value="">Churrascos</option>
+                    <option value="picanha">Picanha - R$ 35.00</option>
+                    <option value="maminha">Maminha - R$ 30.00</option>
+                    <option value="fraldinha">Fraldinha - R$ 28.00</option>
+                    <option value="costela">Costela - R$ 40.00</option>
+                    <option value="alcatra">Alcatra - R$ 32.00</option>
+                </select>
+            </div>
+
+            <div id="pastel-options" class="pedido-options" style="display: none;">
+                <label for="tipo-pastel" class="pedido-label">Escolha o Tipo de Pastel:</label>
+                <select name="tipo-pastel" id="tipo-pastel" class="pedido-select">
+                    <option value="">Pasteis</option>
+                    <option value="carne">Carne - R$ 8.00</option>
+                    <option value="queijo">Queijo - R$ 7.00</option>
+                    <option value="frango">Frango - R$ 9.00</option>
+                    <option value="pizza">Pizza - R$ 10.00</option>
+                    <option value="palmito">Palmito - R$ 12.00</option>
+                </select>
+            </div>
+
+            <div id="hotdog-options" class="pedido-options" style="display: none;">
+                <label for="tipo-hotdog" class="pedido-label">Escolha o Tipo de Cachorro-Quente:</label>
+                <select name="tipo-hotdog" id="tipo-hotdog" class="pedido-select">
+                    <option value="">Cachorros-Quentes</option>
+                    <option value="tradicional">Tradicional - R$ 6.00</option>
+                    <option value="completo">Completo - R$ 8.00</option>
+                    <option value="catupiry">Catupiry - R$ 9.00</option>
+                    <option value="bacon">Bacon - R$ 10.00</option>
+                    <option value="duplo">Duplo - R$ 12.00</option>
+                </select>
+            </div>
+
+            <div id="porcao-options" class="pedido-options" style="display: none;">
+                <label for="tipo-porcao" class="pedido-label">Escolha a Porção:</label>
+                <select name="tipo-porcao" id="tipo-porcao" class="pedido-select">
+                    <option value="">Porções</option>
+                    <option value="batata">Batata Frita - R$ 15.00</option>
+                    <option value="mandioca">Mandioca Frita - R$ 14.00</option>
+                    <option value="frango">Frango a Passarinho - R$ 18.00</option>
+                    <option value="calabresa">Calabresa Acebolada - R$ 20.00</option>
+                    <option value="peixe">Peixe Frito - R$ 25.00</option>
+                </select>
+            </div>
+
+            <div id="churros-options" class="pedido-options" style="display: none;">
+                <label for="tipo-churros" class="pedido-label">Escolha o Tipo de Churros:</label>
+                <select name="tipo-churros" id="tipo-churros" class="pedido-select">
+                    <option value="">Churros</option>
+                    <option value="doceDeLeite">Doce de Leite - R$ 5.00</option>
+                    <option value="chocolate">Chocolate - R$ 6.00</option>
+                    <option value="nutella">Nutella - R$ 7.00</option>
+                    <option value="morango">Morango - R$ 5.00</option>
+                    <option value="caramelo">Caramelo - R$ 6.00</option>
+                </select>
+            </div>
+
+            <label for="bebida" class="pedido-label">Escolha a Bebida Adicional:</label>
+            <select name="bebida" id="bebida" class="pedido-select" onchange="updateTotal()">
+                <option value="">Bebidas</option>
+                <option value="juninho">Juninho - R$ 2.00</option>
+                <option value="refrigeranteLata">Refrigerante Lata - R$ 3.00</option>
+                <option value="refrigeranteMeio">Refrigerante 1,5L - R$ 5.00</option>
+                <option value="refrigeranteDois">Refrigerante 2L - R$ 7.00</option>
+                <option value="suco">Suco - R$ 4.00</option>
+                <option value="cerveja">Cerveja - R$ 6.00</option>
+                <option value="energetico">Energético - R$ 8.00</option>
+                <option value="caipirinha">Caipirinha - R$ 10.00</option>
+                <option value="vinho">Vinho - R$ 12.00</option>
+                <option value="vodka">Vodka - R$ 15.00</option>
+                <option value="whisky">Whisky - R$ 20.00</option>
+            </select>
+
+            <p class="pedido-total">Total: R$ <span id="total">0.00</span></p>
+
+            <button id="finalizar-pedido" class="pedido-button" onclick="finalizarPedido()">Finalizar Pedido</button>
+
+            <div id="forma-pagamento-container" style="display: none;">
+                <label for="forma-pagamento" class="pedido-label">Escolha a Forma de Pagamento:</label>
+                <select name="forma-pagamento" id="forma-pagamento" class="pedido-select"
+                    onchange="showPagamentoOptions()">
+                    <option value="">Formas de Pagamento</option>
+                    <option value="pix">Pix</option>
+                    <option value="cartao">Cartão</option>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="bitcoin">Bitcoin</option>
+                </select>
+                <div id="cartao-options" class="pedido-options" style="display: none;">
+                    <label for="tipo-cartao" class="pedido-label">Tipo de Cartão:</label>
+                    <select name="tipo-cartao" id="tipo-cartao" class="pedido-select">
+                        <option value="credito">Crédito</option>
+                        <option value="debito">Débito</option>
+                    </select>
+                </div>
+                <button id="pagar-pedido" class="pedido-button" onclick="pagarPedido()">Pagar</button>
+            </div>
+
+            <div id="resumo-pedido-container" style="display: none;">
+                <h3 class="pedido-title">Resumo do Pedido</h3>
+                <table id="resumo-pedido" class="pedido-table">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Tipo</th>
+                            <th>Bebida</th>
+                            <th>Forma de Pagamento</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <button id="novo-pedido" class="pedido-button" onclick="novoPedido()">Novo Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fim cardapio -->
+
+
+
+
+
+    <!-- Inicio Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Bar do Douglão</h3>
+                <p>O melhor lugar para você relaxar e saborear comidas deliciosas.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <p>Telefone: (27) 77777-7777</p>
+                <p>Email: contato@bardodouglao.com.br</p>
+                <p>Endereço: Rua Douglas Drosdoki, 777 - Espírito Santo, ES</p>
+            </div>
+            <div class="footer-social">
+                <h3>Siga-nos</h3>
+                <a href="https://www.instagram.com/bardodouglao/" class="social-icon">Facebook</a>
+                <a href="https://www.instagram.com/bardodouglao/" class="social-icon">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bar do Douglão. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- Fim Rodapé -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
